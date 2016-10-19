@@ -1,0 +1,4 @@
+USE $(Db)
+Go
+BACKUP DATABASE $(Db)  TO DISK = '$(BackupLoc)$(Db)_MoveForm$(Fsit)$(CMSfx).bak' WITH NOFORMAT, NOINIT,  NAME = '$(Db)', SKIP, NOREWIND, NOUNLOAD, COMPRESSION,  STATS = 10
+GO
